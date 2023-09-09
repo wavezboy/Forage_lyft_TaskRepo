@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
-from engines.engine import Engine
-from batteries.battery import Battery
+from engine import Engine
+from battery import Battery
 from serviceable import Serviceable
 
 

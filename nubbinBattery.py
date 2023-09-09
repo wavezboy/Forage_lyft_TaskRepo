@@ -1,6 +1,6 @@
 from datetime import date
 from datetime import datetime
-from batteries.battery import Battery
+from battery import Battery
 
 
 class nubbinBattery(Battery):
@@ -9,4 +9,9 @@ class nubbinBattery(Battery):
         self.current_date = current_date
 
     def needs_service(self):
-        return self.last_service_date.replace(year=self.last_service_date.year + 2) < datetime.today().date()
+        if self.last_service_date.replace(year=self.last_service_date.year + 4 ) < datetime.today().date():
+            return True
+        else :
+            return False
+
+print()
